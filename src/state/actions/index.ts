@@ -3,7 +3,7 @@ import { ActionType } from './../action-types/index';
 interface SearchRepositoriesAction {
     type: ActionType.SEARCH_REPOSITORIES;
    }
-interface SearchRepositoriesSuccsessAction {
+interface SearchRepositoriesSuccessAction {
     type: ActionType.SEARCH_REPOSITORIES_SUCCESS;
     payload: string[];
    }
@@ -13,6 +13,6 @@ interface SearchRepositoriesErrorAction {
    }
 
  export type Action =
-    SearchRepositoriesAction | 
-    SearchRepositoriesSuccsessAction | 
-    SearchRepositoriesErrorAction;
+  | SearchRepositoriesAction
+  | SearchRepositoriesSuccessAction
+  | SearchRepositoriesErrorAction;

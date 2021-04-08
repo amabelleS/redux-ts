@@ -3,7 +3,7 @@ import { Dispatch } from "redux";
 import { ActionType } from "../action-types";
 import { Action } from "../actions";
 
-export const searchREpositories = (term: string) => {
+export const searchRepositories = (term: string) => {
     return async (dispach: Dispatch<Action>) => {
         dispach({
             type: ActionType.SEARCH_REPOSITORIES
@@ -19,6 +19,8 @@ export const searchREpositories = (term: string) => {
             const names = data.objects.map((result: any) => {
                 return result.package.name
             })
+            console.log(names);
+            
 
             dispach({
                 type: ActionType.SEARCH_REPOSITORIES_SUCCESS,
