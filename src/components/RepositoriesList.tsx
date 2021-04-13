@@ -23,8 +23,8 @@ const RepositoriesList: React.FC = () => {
     }
 return <div className="list">
     <form onSubmit={onSubmit}>
-        <input value={term} onChange={e => setTerm(e.target.value)}/>
-        <button>Search</button>
+        <input className="search-input" value={term} onChange={e => setTerm(e.target.value)}/>
+        <button className="button">Search</button>
     </form>
     <div className="list-items">
     {error && <h3>{error}</h3>}
