@@ -5,7 +5,7 @@ import RepositoriesList from "./RepositoriesList";
 const App = () => {
   return (
     <Provider store={store}>
-<div>
+<div className="main">
   <h1>Search for a Packege</h1>
 <RepositoriesList/>
 </div>

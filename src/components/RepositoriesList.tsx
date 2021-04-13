@@ -5,6 +5,8 @@ import { useTypedSelector } from "../hooks/useTypedSelector";
 // import { actionCreators } from "../state";
 import { useActions } from "../hooks/useActions";
 
+import './RepositoriesList.css'
+
 const RepositoriesList: React.FC = () => {
     const [term, setTerm] = useState('')
     // const dispatch = useDispatch()
@@ -19,14 +21,15 @@ const RepositoriesList: React.FC = () => {
         // dispatch(actionCreators.searchRepositories(term))
         searchRepositories(term)
     }
-return <div>
+return <div className="list">
     <form onSubmit={onSubmit}>
         <input value={term} onChange={e => setTerm(e.target.value)}/>
         <button>Search</button>
     </form>
+    <div className="list-items">
     {error && <h3>{error}</h3>}
     {loading && <h3>Loading...</h3>}
-    {!error && !loading && data.map(name => <div key={name}>{name}</div>)}
+    {!error && !loading && data.map(name => <div key={name}>{name}</div>)}</div>
 </div>
 }
 
